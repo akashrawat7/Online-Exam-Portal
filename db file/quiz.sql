@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 18, 2018 at 04:40 PM
+-- Generation Time: Jun 18, 2018 at 03:36 PM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.20
 
@@ -19,6 +19,25 @@ SET time_zone = "+00:00";
 --
 -- Database: `quiz`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `adminlogin`
+--
+
+CREATE TABLE `adminlogin` (
+  `id` int(105) NOT NULL,
+  `adminname` varchar(225) NOT NULL,
+  `password` varchar(225) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `adminlogin`
+--
+
+INSERT INTO `adminlogin` (`id`, `adminname`, `password`) VALUES
+(1, 'akash', 'akash');
 
 -- --------------------------------------------------------
 
@@ -139,6 +158,12 @@ INSERT INTO `user` (`uid`, `username`, `totalque`, `anscorrect`) VALUES
 --
 
 --
+-- Indexes for table `adminlogin`
+--
+ALTER TABLE `adminlogin`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `quizz`
 --
 ALTER TABLE `quizz`
@@ -160,6 +185,11 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for dumped tables
 --
 
+--
+-- AUTO_INCREMENT for table `adminlogin`
+--
+ALTER TABLE `adminlogin`
+  MODIFY `id` int(105) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `signin`
 --
