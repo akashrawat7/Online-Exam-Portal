@@ -6,18 +6,15 @@
 		  $name = $_POST['user'];
 		  $password = $_POST['pwd'];
 		  $q = "select * from signin where name = '$name' and password = '$password' ";
-	      
 		  $result = mysqli_query($con, $q) or die(mysqli_error($con));
 		  $count = mysqli_num_rows($result);
 		  if($count == 1){
-			 
 			 $_SESSION['user'] = $name;
 			 header('location:choice.php');
 		  }
 		  else{
 			  ?> 
 			  <img src="../pics/wrong.png"> </img>
-			
 			  <?php
 			echo"<h2>Wrong Name And Password Try Again!!</h2>";
 			  ?>

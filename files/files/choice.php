@@ -34,44 +34,30 @@
   <h1> Welcome <?php echo $_SESSION['user']; ?> </h1><br><h3>Choose Any One Subject !!</h3>
 	</div>
               <div class="container">
-			  
             <?php
-            
 			$query="select * from subject";
 			$sho=mysqli_query($con,$query);
-			
-		
 			while($r= mysqli_fetch_assoc($sho)){
-				
 				?>
 				<form method = "post" action="question.php">
 				<div class="col-md-12 d-block">
 				<div class="card-footer bg-muted">
 				<input type="radio" value="<?php echo $r['subname'] ?>" name="subcheck[1]" required>
+				<input type="hidden" value="<?php echo $r['subname'] ?>" name="selected" required>
 				<?php echo $r['subname'] ?>
 				</div>
-				
 				</div>
-				
 			<?php	
 			}
 		?>						
-         
-
-       <br>   <input type="submit" class="btn btn-danger" name="ck"   >
+       <br>   <input type="submit" class="btn btn-danger" name="ck" value="Submit">
 				</form>
 <br><br>
-           		  
-               
-     
 	   </div><br><br>
 	<div class="card-footer">
 	<div class="col-sm-12 text-center">
 	<b><h4>copyright &copy; Akash Rawat</h4></b>
 	</div>
      </div>
-	
-	
-	
 	</body>
 	</html>

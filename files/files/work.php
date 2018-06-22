@@ -1,10 +1,8 @@
 <?php
-
 session_start();
  if(!isset($_SESSION['uid'])){
 	 header('location:admin.php');
  }
-
 ?>
 <?php
 require('connect.php');
@@ -36,46 +34,32 @@ require('connect.php');
     <div class="card-body bg-warning">
       <h4 class="card-title">ADMIN PAGE ONLY!</h4>
       <p class="card-text">WELCOME MR. AKASH</p>
-     
     </div>
 	</div>
-	
   </div>
   <div class="col-sm-6">
-    
     <div class="card-body bg-warning">
       <h4 class="card-title"><a href="admin1.php" class="btn btn-success">ADD QUESTION</a></h4>
       <p class="card-text">CLICK HERE TO ADD QUESTION!</p>
-     
     </div><hr>
-	
 	<div class="card-body bg-warning">
       <h4 class="card-title"><a href="search.php" class="btn btn-success">EDIT QUESTION</a></h4>
       <p class="card-text">CLICK HERE TO EDIT QUESTION!</p>
      
     </div><hr>
-	
 	  <div class="card-body bg-warning">
       <h4 class="card-title"><a href="admin3.php" class="btn btn-success">DELETE QUESTION</a></h4>
       <p class="card-text">CLICK HERE TO DELETE QUESTION!</p>
-     
     </div><hr>
-	
 	<div class="card-body bg-warning">
       <h4 class="card-title"><a href="admin4.php" class="btn btn-success">ADD NEW SUBJECT</a></h4>
       <p class="card-text">CLICK HERE TO ADD SUBJECT!</p>
-     
     </div><hr>
-	
 	</div>
- 
-  
-  
   </div>
   </div> <br><br><br> <br><br><br>
   <div class="col-sm-12">
 	<font color="black"><b><h4>copyright &copy; Akash Rawat</h4></b></font>
 	</div>
 	</div>
-	
 	</html>

@@ -11,7 +11,6 @@ require('connect.php');
 ?>
 <!DOCTYPE html>
 <html lang=en>
-
 	<head>
 		<title>
 		project
@@ -42,14 +41,26 @@ require('connect.php');
       <label for="text">Question:</label>
       <input type="text" class="form-control" id="que" placeholder="Enter Question" name="que" autocomplete="off" required>
     </div><div class="form-group">
+	
+	<?php
+	$s = "select * from subject ";
+    $exe= mysqli_query($con,$s);
+      	
+		
+	?>
+	
   <label for="sel1">Select Question Subject:</label>
   <select class="form-control" id="sel1" name="qsub" required>
-    <option>HTML</option>
-    <option>SQL</option>
-    <option>XML</option>
-    <option>PHP</option>
-	<option>CSS</option>
-	<option>JS</option>
+        <?php
+		 if(mysqli_num_rows($exe)>=1){
+			
+      while($data = mysqli_fetch_assoc($exe)){
+		  ?>
+    <option><?php echo $data['subname']; ?></option>
+	<?php
+		}
+		 }
+		?>
   </select>
 </div> <div class="form-group">
       <label for="text">Option 1:</label>
@@ -71,14 +82,9 @@ require('connect.php');
 
   </form>
 </div>
-
-	 
 	  </body>
 	  </html>
-	  
-	  
 	  <?php
-	  
 	  if(isset($_POST['click'])){
 		 $id = $_POST['qid'];
 		$question = $_POST['que'];
@@ -88,7 +94,6 @@ require('connect.php');
 		$opt3 = $_POST['ans3'];
 		$opt4 = $_POST['ans4'];
 		$opt_corr = $_POST['corr_ans'];
-		
 		$ins = "insert into quizz(id, sub, ques, ans1 , ans2 , ans3 , ans4, corr_ans) VALUES ('$id','$subj','$question','$opt1','$opt2','$opt3','$opt4','$opt_corr')";
 		$ins_data = mysqli_query($con, $ins);
 		if($ins_data){
@@ -97,8 +102,6 @@ require('connect.php');
 				 window.open('work.php','_self');
 				 </script>";
 		}
-	  
 	  }
-	  
 	  ?>
 	  

@@ -25,11 +25,9 @@ require('connect.php');
 		<font face="Comic Sans MS" color="khaki"><hr> ONLINE &nbsp;EXAM&nbsp;PORTAL</hr></font>
 		</div>
 	</div><br><br><br><br>
-
 	<center><div class="container-fluid-center" style="background-color:khaki; width:350px; text-align:center;">
 	<div class="col-sm-12" id="form">
 	<form action="file1.php" method="post">
-	
 		<div class="form-group"><br>
 			<label for="user"><b>Username:</b></label>
 			<input type="text" class="form-control" name="user" placeholder="Enter Username" autocomplete="off" required>
@@ -40,24 +38,15 @@ require('connect.php');
 		</div>
 		<div class="sm-col-12">
 		<b>If Not A Member Sign Up Here||<a href="signup.php">Sign Up</a></b>
-			
 		</div><br>
 		<input class="button1" type="submit" name="log" value="Login" role="button">
 	</form>
 	</div></center>
-
-	
-	
-	
-	
-	
 	</div>
 	<div class="col-sm-12">
 	<font color="white"><b><h4>copyright &copy; Akash Rawat</h4></b></font>
 	</div>
-	<div class="float-sm-right"><a href="admin.php" class="btn btn-danger" role="button">Admin Login</a></div>
-	
-	
+	<div class="float-sm-right"><a href="admin.php" class="btn btn-danger" role="button">Admin Login</a></div>s
 	</body>
 	</html>
 	

@@ -18,9 +18,7 @@
 	</body>
 	<div class="float-sm-left"><a href="login.php" class="btn btn-danger" role="button">BACK</a></div>
 	<h1 style="font-family:arial; color:brown;"><center>This Page Is Only For Admin</center></h1><hr><br><br><br>
-	
 			<div class="container" style="background-color:khaki;">
-			
   <h2>ADMIN LOGIN</h2><hr>
   <form action="admin.php" method="post">
     <div class="form-group" >
@@ -36,14 +34,8 @@
   </form>
   </div><br><br><br><br>
   		<?php
-
 require('connect.php');
-
-
-
-
 if(isset($_POST['ck'])){
- 
   $user = $_POST['name'];
   $pass = $_POST['pass'];
   $query = "select * from adminlogin where adminname = '$user' and password = '$pass'";
@@ -58,15 +50,13 @@ if(isset($_POST['ck'])){
   }
 else{
 		  $data=mysqli_fetch_assoc($res);
-	  
 	 session_start();
 	 $_SESSION['uid']=$user;
 	 header('location:work.php');
     }
 }
 	?>		
-
-<div class="col-sm-12">
+<div class="col-sm-12"><br><br>
 	<font color="black"><b><h4>copyright &copy; Akash Rawat</h4></b></font>
 	</div>	
 	</body>

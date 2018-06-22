@@ -82,17 +82,11 @@ require('connect.php');
           <td><?php echo $data['ans4'] ?></td>
           <td><?php echo $data['corr_ans'] ?></td>
 		  <td><a href="rem.php?sid=<?php echo $data['id']; ?>" class="btn btn-danger" role="button">Delete</a></td>
-
-          
-        
 		<?php
 			   }
-			
 		  }
-		  
 			else{
 			?>
-			
 			<td colspan="7" align="center">
 			  <?php
 			echo "<h1> NO RECORD FOR THIS TYPE OF WORDS!!</h1>";?>
@@ -101,16 +95,11 @@ require('connect.php');
 			<?php	   
 			   }			
 	  }
-	  
 	 ?>
-          
       </tbody>
     </table>
   </div>
   </div>
 </div>
- 
-
-
 </body>
 </html>

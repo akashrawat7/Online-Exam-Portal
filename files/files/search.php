@@ -56,15 +56,11 @@ session_start();
 	<?php
 		error_reporting(0);
 	   require('connect.php');
-	 
 	  if(isset($_POST['click'])){
 		  $name = $_POST['cat'];
-		  $q = "SELECT * FROM `quizz` where sub = '$name' ";
-	      
+		  $q = "SELECT * FROM `quizz` where sub = '$name'";
 		  $result = mysqli_query($con, $q) or die(mysqli_error($con));
-		 
 		  if(mysqli_num_rows($result)>=1){
-			  
 			   while($data = mysqli_fetch_assoc($result)){
 				   ?>
 			   <tbody>
@@ -78,17 +74,11 @@ session_start();
           <td><?php echo $data['ans4'] ?></td>
           <td><?php echo $data['corr_ans'] ?></td>
 		  <td><a href="admin2.php?sid=<?php echo $data['id']; ?>" class="btn btn-danger" role="button">Edit</a></td>
-
-          
-        
 		<?php
 			   }
-			
 		  }
-		  
 			else{
 			?>
-			
 			<td colspan="7" align="center">
 			  <?php
 			echo "<h1> NO RECORD FOR THIS TYPE OF WORDS!!</h1>";?>
@@ -97,19 +87,11 @@ session_start();
 			<?php	   
 			   }			
 	  }
-	  
 	 ?>
-
-          
-       
-          
       </tbody>
     </table>
   </div>
   </div>
 </div>
- 
-
-
 </body>
 </html>
