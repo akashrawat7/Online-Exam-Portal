@@ -11,7 +11,7 @@ require('connect.php');
 <html lang=en>
 	<head>
 		<title>
-		project
+		ONLINE-EXAM-PORTAL
 		</title>
 		<meta charset=utf8>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,6 +24,7 @@ require('connect.php');
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
 		<!-- Latest compiled JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+		 <link rel="shortcut icon" href="../pics/favicon.ico">
 	</head>
 	<div class="container-fluid">
 	<div class="float-sm-right"><a href="Logout.php" class="btn btn-danger" role="button">Logout</a></div>

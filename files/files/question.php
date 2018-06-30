@@ -9,11 +9,12 @@
 
 <html lang=en>
 	<head>
-		<title>
-		project
+	<title>
+		ONLINE-EXAM-PORTAL
 		</title>
 		<meta charset=utf8>
-		<meta name="viewport" content="width=device-width, initial-scale=1"><!-- Latest compiled and minified CSS -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
 		<link rel="stylesheet" href="oep.css">
 		<!-- jQuery library -->
@@ -22,6 +23,7 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
 		<!-- Latest compiled JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+		 <link rel="shortcut icon" href="../pics/favicon.ico">	
 	</head>
 	<body>
 	
@@ -45,7 +47,7 @@
 				if(!empty($_POST['subcheck'])){
 			$select = $_POST['subcheck'];
             $i=1;
-			$query="select * from quizz where sub = '$select[$i]'";
+			$query="select * from quizz where sub = '$select[$i]' ORDER BY rand()";
 			$show=mysqli_query($con,$query);
 			$no=0;
 			while($res = mysqli_fetch_assoc($show)){
@@ -56,7 +58,7 @@
 				<div class="card bg-muted">
 				<div class="card-body">
 				<div class=" card-header">
-				Q<?php echo $n; ?>.   <?php echo $res['ques'] ?>
+				Q<?php echo $no; ?>.   <?php echo $res['ques'] ?>
 				</div>
 				<div class="card-footer">
 				<input type="radio" value="1" name="quizcheck[<?php echo $res['id'] ?>]" >
